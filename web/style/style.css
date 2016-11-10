@@ -1,0 +1,72 @@
+/*###########               Html styling            ##############*/
+
+/*************************** ISOTOPE ***********************************/
+* { box-sizing: border-box; }
+
+
+/* ---- input ---- */
+
+input[type="text"] {
+    font-size: 20px;
+}
+
+/* ---- isotope ---- */
+
+.grid {
+    margin-left: 9vw;
+    margin-right: 1px;
+
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .element-item ou Gestion des blocs Isotope ---- */
+
+.grid-sizer,
+.element-item {
+    position: relative;
+    width: 50%;
+    display: block;
+    margin: 7px;
+    min-width: 250px;
+    height: 320px;
+    color: white;
+}
+.motclef{
+    font-size: 9px;
+    display: none;
+}
+
+/* Carte page Front*/
+.NewsName img{
+    height: 80px;
+    width: auto;
+}
+
+.NewsName h2{
+    font-size: 20px;
+}
+
+.element-item > * {
+    margin: 0;
+    padding: 0;
+}
+.infoNews{
+    font-size: 20px;
+}
+.nomNews{
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.input-group{
+    margin-bottom: 40px;
+    z-index: 0;
+}
+.textNews{
+    font-size: 15px;
+}
