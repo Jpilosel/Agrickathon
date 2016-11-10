@@ -1,13 +1,118 @@
+{% block head %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="HubAgri">
+    <link rel="stylesheet" href="{{ asset('font-awesome-4.6.3/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/jquery-ui-1.12.1/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/summernote.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/style.css')}}">
+    <link rel="icon" type="image/png" href="{{ asset("#") }}">
+    <script src="{{ asset('style/jquery/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.tablesorter/jquery.tablesorter.min.js')}}"></script>
+    <script src="{{ asset('style/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('style/jquery-ui-1.12.1/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/custom.js')}}"></script>
+    <script src="{{ asset('dist/summernote.min.js')}}"></script>
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+    <title>HubAgri</title>
+</head>
+{% endblock %}
+<body>
+    <!-- Barre de recherche -->
+    <div id="custom-search-input">
+        <div class="input-group">
+            <input id="search" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher par équipes, mot-clefs, référents ..." />
+            <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+    <!-- fin bare decherche -->
+    <!-- tuile news -->
+    <div class="grid row">
+      {#  { for equipe in equipes %}  #}
+            <a class="aNews" href="{# path('#', { 'id': # }) #}">
+                <div class="element-item bleu grid-sizer carteNews">
+                    <div class="carteContent">
+                        <div class="topCarte">
+                            <div class="NewsRightCarte">
+                                <div class="NewsName text-center row panelimg">
+                                    <p>img</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottomCarte">
+                            <div class="NewsLeftCarte row">
+                                <div class="col-lg-12 text-center infoNews">
+                                    <ul>
+                                        <li><h2 class="col-lg-12 nomNews">{# equipe.nomEquipe #} tralala</h2></li>
+                                        <li class="textNews"><i class="fa fa-user" aria-hidden="true"></i>nom prénom</li>
+                                        <li class="textNews"><a href="mailto:{# equipe.emailReferent #}#"><i class="fa fa-envelope" aria-hidden="true"></i>Email du référent</a></li>
+                                        <li class="textNews"><a href="{# equipe.siteWebEquipe #}" target="_blank"><i class="fa fa-flask" aria-hidden="true"></i>Site Web du laboratoire</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12">
+                                    <ul class="list-unstyled list-inline motclef">
+                                    {#    {%  for k in equipe.keywordsEquipe %}  #}
+                                            <li>
+                                                {# motclef #}mot clef
+                                            </li>
+                                        {#  {% endfor %}  #}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+      {#  {% endfor %}  #}
+    </div>
+    <!-- fin tuile news -->
+
+
+
+
+    <script>
+        // quick search regex
+        var qsRegex;
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            filter: function() {
+                return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
+        });
+
+        // use value of search field to filter
+        var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+            qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+            $grid.isotope();
+        }, 200 ) );
+
+        // debounce so filtering doesn't happen every millisecond
+        function debounce( fn, threshold ) {
+            var timeout;
+            return function debounced() {
+                if ( timeout ) {
+                    clearTimeout( timeout );
+                }
+                function delayed() {
+                    fn();
+                    timeout = null;
+                }
+                timeout = setTimeout( delayed, threshold || 100 );
+            }
+        }
+
+    </script>
+</body>
 </html>
