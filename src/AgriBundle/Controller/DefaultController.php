@@ -14,4 +14,28 @@ class DefaultController extends Controller
     {
         return $this->render('AgriBundle:Default:index.html.twig');
     }
+
+    /**
+     * @Route("/tutoriel", name="tutoriel")
+     */
+    public function tutorielAction()
+    {
+        return $this->render('AgriBundle:Default:tutoriel.html.twig');
+    }
+
+    /**
+     * @Route("/article", name="article")
+     */
+    public function articlelAction()
+    {
+        return $this->render('AgriBundle:Default:article.html.twig');
+    }
+
+    /**
+     * @Route("/compte", name="compte")
+     */
+    public function moncomptelAction()
+    {
+        return $this->render('AgriBundle:Default:compte.html.twig');
+    }
 }
