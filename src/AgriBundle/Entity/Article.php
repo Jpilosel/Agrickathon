@@ -91,6 +91,12 @@ class Article
      */
     private $note;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="text")
+     */
+    private $image;
 
     /**
      * Get id
@@ -330,5 +336,28 @@ class Article
     public function getNote()
     {
         return $this->note;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     * @return Article
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

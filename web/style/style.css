@@ -21,7 +21,36 @@
     text-align: center;
     padding-bottom:10px;
 }
-
+.articleDetailContenu{
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.imgDetailTitre{
+    background-image: url("img/yee.jpg");
+}
+.articleDetailNom{
+    color: white;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+.imgthomas{
+     height: 160px;
+ }
+.imgThomasCentre{
+    margin-top: -80px;
+    margin-left: 45%;
+}
+.imgArticleRecherche{
+    height: 160px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 15px;
+    color: white;
+}
+.articleNote{
+    border-top: 1px solid grey;
+}
 
 /*************************** ARTICLE ***********************************/
 .nom{
@@ -34,6 +63,7 @@
     border-right: 1px solid grey;
     height: 800px;
     padding-top: 20em;
+    width: 13%;
 }
 .articleDetailTitre{
     text-align: center;
@@ -41,7 +71,21 @@
 .articleDetailContenu{
     margin-top: 20px;
 }
-
+.checkboxArticle{
+    margin-top: 15px;
+}
+.commentaireEdit{
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    height:100px;
+    border:1px solid grey;
+    padding: 8px 0 0 10px;
+}
+.boutonPublier{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 
@@ -105,6 +149,7 @@ input[type="text"] {
 .nomNews{
     font-size: 20px;
     margin-bottom: 35px;
+    color: white;
 }
 .input-group{
     margin-bottom: 40px;
@@ -113,4 +158,32 @@ input[type="text"] {
 .textNews{
     font-size: 15px;
 }
-
+/*************************** notation étoile ***********************************/
+.rating a,
+.rating label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+    font-size: 5em;
+}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction: rtl;
+    margin-right: 34%;
+}
+.rating2 a {
+    float:none
+}

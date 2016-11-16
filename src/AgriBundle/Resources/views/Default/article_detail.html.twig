@@ -23,8 +23,9 @@
 {% endblock %}
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row imgDetailTitre">
             <div class="col-xs-8">
+                <img class="hidden-md hidden-lg imgthomas img-responsive" src="{{ asset( '/image/thomas.png') }}">
             </div>
             <div class="col-xs-4">
                 <div class="articleDetailNom">
@@ -35,8 +36,13 @@
                 </div>
             </div>
         </div>
-        <div class="articleDetailTitre">
-           <h1> {{ articles.titre }} </h1>
+        <div class="row">
+            <div class="hidden-xs hidden-sm imgThomasCentre">
+                <img class="imgthomas img-responsive" src="{{ asset( '/image/thomas.png') }}">
+            </div>
+            <div class="articleDetailTitre">
+               <h1> {{ articles.titre }} </h1>
+            </div>
         </div>
         <div class="articleDetailDate text-center">
             Posté le {{ articles.date | date('d-m-Y') }}
@@ -47,7 +53,33 @@
         <div>
             {{ articles.video }}
         </div>
-
+        <div class="articleNote">
+            <h2 class="text-center">NOTEZ CET ARTICLE</h2>
+            <p>Cet article vous a-i-il été utile?</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="rating rating2"><!--
+                --><a href="#5" title="5/5">★</a><!--
+                --><a href="#4" title="4/5">★</a><!--
+                --><a href="#3" title="3/5">★</a><!--
+                --><a href="#2" title="2/5">★</a><!--
+                --><a href="#1" title="1/5">★</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="commentaire">
+                <h2>COMMENTAIRE</h2>
+                <input class="checkboxArticle" type="checkbox">Je souhaite être notifié<br/>
+            </div>
+            <div class="commentaireEdit">
+                <p>Rédigez votre commentaire ...</p>
+            </div>
+            <button class="btn btn-default boutonPublier" type="submit">Publier</button>
+        </div>
 
     </div>
 
@@ -60,6 +92,6 @@
 
 
 
-{{ articles.note }}
+
 </body>
 </html>
