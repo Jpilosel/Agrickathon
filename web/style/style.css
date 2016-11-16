@@ -1,20 +1,24 @@
 /*###########               Html styling            ##############*/
-.container{
-    border: 1px solid red;
+
+
+/*************************** Accueil ***********************************/
+
+
+.logo {
+    height: 150px;
+    width: 250px;
 }
 
-#imgnav {
-    height: 30px;
+.accueilGlyph{
+    margin-bottom: 300px;
 }
-.apprendre{
-    border: 1px solid black;
-}
-.tuto{
-    border: 1px solid rebeccapurple;
-}
-.article{
-    border: 1px solid blue;
-}
+
+
+
+
+
+
+
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 
@@ -85,3 +89,4 @@ input[type="text"] {
 .textNews{
     font-size: 15px;
 }
+
