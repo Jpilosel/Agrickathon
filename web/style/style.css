@@ -54,12 +54,13 @@ input[type="text"] {
 .grid-sizer,
 .element-item {
     position: relative;
-    width: 50%;
+    width: 45%;
     display: block;
     margin: 7px;
     min-width: 250px;
     height: 320px;
-    color: white;
+    color: black;
+    background-color: grey;
 }
 .motclef{
     font-size: 9px;
