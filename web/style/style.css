@@ -22,8 +22,26 @@
     padding-bottom:10px;
 }
 
+.userTitre {
+    text-align: center;
+}
+
+.userTexte {
+    text-align: center;
+}
+
+.jumbotron {
+
+    background: url('./image/jumbo.png') no-repeat fixed center center;
+    background-size: cover;
+    height: 900px;
+    width:100%;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
 
 
+}
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 

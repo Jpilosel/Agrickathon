@@ -16,14 +16,6 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/tutoriel", name="tutoriel")
-     */
-    public function tutorielAction()
-    {
-        return $this->render('AgriBundle:Default:tutoriel.html.twig');
-    }
-
-    /**
      * @Route("/article", name="article")
      */
     public function articlelAction()
