@@ -20,7 +20,13 @@ class DefaultController extends Controller
      */
     public function articlelAction()
     {
-        return $this->render('AgriBundle:Default:article.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('AgriBundle:Article')->findAll();
+
+        return $this->render('AgriBundle:Default:article.html.twig', array(
+            'articles' => $articles,
+        ));
     }
 
     /**
