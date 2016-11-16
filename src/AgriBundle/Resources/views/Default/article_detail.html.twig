@@ -1,0 +1,65 @@
+{% block head %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="HubAgri">
+    <link rel="stylesheet" href="{{ asset('font-awesome-4.6.3/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/jquery-ui-1.12.1/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/summernote.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/style.css')}}">
+    <link rel="icon" type="image/png" href="{{ asset("#") }}">
+    <script src="{{ asset('style/jquery/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.tablesorter/jquery.tablesorter.min.js')}}"></script>
+    <script src="{{ asset('style/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('style/jquery-ui-1.12.1/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/custom.js')}}"></script>
+    <script src="{{ asset('dist/summernote.min.js')}}"></script>
+    <script src="{{ asset('style/js/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ asset('style/js/isotope.pkgd.min.js') }}"></script>
+    <title>HubAgri</title>
+</head>
+{% endblock %}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-4">
+                <div class="articleDetailNom">
+                    Auteur : {{ articles.nom }} <br/>
+                    Système de culture : {{ articles.culture }} <br/>
+                    Région : {{ articles.region }} <br/>
+                    Status : {{ articles.statut }}
+                </div>
+            </div>
+        </div>
+        <div class="articleDetailTitre">
+           <h1> {{ articles.titre }} </h1>
+        </div>
+        <div class="articleDetailDate text-center">
+            Posté le {{ articles.date | date('d-m-Y') }}
+        </div>
+        <div class="articleDetailContenu text-justify">
+            {{ articles.contenu }}
+        </div>
+        <div>
+            {{ articles.video }}
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+{{ articles.note }}
+</body>
+</html>

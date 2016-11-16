@@ -23,6 +23,24 @@
 }
 
 
+/*************************** ARTICLE ***********************************/
+.nom{
+    text-align: left;
+}
+.newsName{
+    padding-left: 5px;
+}
+.recherche{
+    border-right: 1px solid grey;
+    height: 800px;
+    padding-top: 20em;
+}
+.articleDetailTitre{
+    text-align: center;
+}
+.articleDetailContenu{
+    margin-top: 20px;
+}
 
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }

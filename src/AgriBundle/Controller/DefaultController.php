@@ -38,6 +38,18 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/article/detail/{id}", name="article_detail")
+     */
+    public function articleDetailAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $articles = $em->getRepository('AgriBundle:Article')->findOneById($id);
+        return $this->render('AgriBundle:Default:article_detail.html.twig', array(
+            'articles' => $articles,
+        ));
+    }
+
+    /**
      * @Route("/compte", name="compte")
      */
     public function moncomptelAction()

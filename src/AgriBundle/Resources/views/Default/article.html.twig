@@ -23,66 +23,89 @@
 {% endblock %}
 <body>
 <!-- Barre de recherche -->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="accueilBandeau">
-                <a class="logo href="{{ path('accueil') }}"> <img src="{{ asset('image/imgDefault.png')}}" alt="" class="img-responsive logo" /> </a>
+            <div class="col-lg-1 ">
             </div>
-            <div class="col-lg-offset-8 col-lg-4">
-                <ul class="nav navbar-nav "id="glyph">
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Alert</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> S'identifier</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> S'enregistrer</a></li>
-                </ul>
+            <div class="col-lg-11">
+                <div class="col-md-offset-3 col-md-6">
+                    <!-- Barre de recherche -->
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input id="search" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher par équipes, mot-clefs, référents ..." />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div id="custom-search-input">
-            <div class="input-group">
-                <input id="search" type="text" class="quicksearch form-control input-lg" placeholder="Rechercher par équipes, mot-clefs, référents ..." />
-                <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-            </div>
-        </div>
+    <div class="container-fluid">
         <!-- fin bare decherche -->
         <!-- tuile news -->
         <div class="grid row">
-            {% for article in articles %}
-                <a class="aNews" href="{# path('#', { 'id': # }) #}">
-                    <div class="element-item bleu grid-sizer carteEquipe">
-                        <div class="carteContent">
-                            <div class="topCarte">
-                                <div class="equipeRightCarte">
-                                    <div class="equipeName text-center row panelimg">
-                                        {{ article.nom }}
-                                        {{ article.titre }}
+            <div class="col-lg-1 recherche">
+                <div>
+                    Filtre :
+                </div>
+                <div>
+                    <input type="checkbox">Cultures
+                    <input type="checkbox">Elevage
+                    <input type="checkbox">Machinisme
+                    <input type="checkbox">Gestion/Droit
+                </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+
+            <div class="col-lg-10">
+                {% for article in articles %}
+                    <a class="aNews" href="{{ path('article_detail', { 'id': article.id }) }}">
+                        <div class="element-item bleu grid-sizer carteNews">
+                            <div class="carteContent">
+                                <div class="topCarte">
+                                    <div class="newsRightCarte">
+                                        <div class="newsName text-center row panelimg">
+                                            <div class="col-lg-8 nom">
+                                                {{ article.nom }}
+                                            </div>
+                                            <div class="col-lg-4">
+                                                {{ article.date | date('d-m-Y') }}
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="bottomCarte">
-                                <div class="equipeLeftCarte row">
-                                    <div class="col-lg-12 text-center infoEquipe">
+                                <div class="bottomCarte">
+                                    <div class="newsLeftCarte row">
+                                        <div class="col-lg-12 text-center infoEquipe">
 
-                                            <h2 class="col-lg-12 nomEquipe"></h2>
+                                                <h2 class="col-lg-12 nomNews">{{ article.titre }}</h2>
+                                                <p>{{ article.contenu | truncate(120) }}</p>
+                                                <p>Type de culture : {{ article.culture }}</p>
 
 
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <ul class="list-unstyled list-inline motclef">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <ul class="list-unstyled list-inline motclef">
+                                                <li>{{ article.motCle }}</li>
+                                                <li>{{ article.contenu }}</li>
+                                                <li>{{ article.video }}</li>
+                                                <li>{{ article.region }}</li>
 
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            {% endfor %}
-
+                    </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 <!-- fin tuile news -->
