@@ -7,43 +7,50 @@
     <link rel="stylesheet" href="{{ asset('style/style.css')}}">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="accueilBandeau">
-                <a class="logo href="{{ path('accueil') }}"> <img src="{{ asset('image/imgDefault.png')}}" alt="" class="img-responsive logo" /> </a>
-            </div>
-            <div class="col-lg-offset-8 col-lg-4">
-                <ul class="nav navbar-nav "id="glyph">
-                     <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Alert</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> S'identifier</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> S'enregistrer</a></li>
-                </ul>
-            </div>
+
+<nav class="navbar navbar menu">
+    <div class="container-fluid menuNav">
+        <div class="navbar-header">
+            <a class="navbar-brand " href="#"><img src="{{ asset('image/logo.png')}}" alt="Logo de la Agri'ID" class="img-responsive logo" /></a>
         </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Accueil</a></li>
+            <li><a class="menuFont" href="#">Rechercher</a></li>
+            <li><a class="menuFont" href="#">Partager</a></li>
+            <li><a class="menuFont" href="#">Actualités</a></li>
+            <li><a class="menuFont" href="#">Evénements</a></li>
+            <li><a class="menuFont" href="#">Qui sommes-nous ?</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="menuFont"><span class="glyphicon glyphicon-user"></span> S'enregistrer</a></li>
+            <li><a href="#"class="menuFont"><span class="glyphicon glyphicon-log-in"></span> S'identifier</a></li>
+        </ul>
     </div>
+</nav>
+
 
     <div class="jumbotron">
-        <div class="container">
-            <h1>Hub Agri</h1>
-            <p>La plateforme trop bien</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a></p>
+
+        <div class="container-fluid">
+           <!--- <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a></p>--->
         </div>
     </div>
 
     <div class="container">
+
         <div class="row">
-            <h2 class="catTitre">LOREM IPSUM</h2>
+
             <div class="rubrique">
 
                 <div class="col-lg-6">
                     <a href="#" class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/cat2.jpeg')}}"alt="rechecher">
                     </a>
-                 </div>
+                </div>
 
                <div class="col-lg-6">
                 <a href="#" class="thumbnail">
-                    <img src="..." alt="...">
+                    <img src="{{ asset('image/cat1.jpeg')}}" alt="...">
                 </a>
                 </div>
            </div>
@@ -52,79 +59,96 @@
             <div class="rubrique">
                 <div class="col-lg-6">
                     <a href="#" class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/cat4.png')}}" alt="...">
                     </a>
                 </div>
 
                 <div class="col-lg-6">
                     <a href="#" class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/cat3.jpeg')}}" alt="...">
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="background1">
     <div class="container">
         <div class="note">
-            <h2 class="catTitre">Contenus populaires</h2>
+            <h1 class="catTitre">Contenus les plus populaires</h1>
             <div class="row">
+                <div class="col-lg-offset-2 col-lg-4"><h2 class="catTitre2">Meilleurs articles</h2></div>
+                <div class="col-lg-offset-1 col-lg-4"><h2 class="catTitre2">Article des top utilisateurs</h2></div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/star1.png')}}" alt="">
                         <div class="caption">
-                            <h3>Top Star</h3>
-                            <p>...</p>
+                            <h3 class="starTitre">Les paturages de demain</h3>
+                            <p class="starTexte">Note <br/>
+                            <p class="starTexte">1er novembre 2016<br/>
+                            <p class="starTexte">Note : 5 <br/>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/user1.png')}}" alt="">
                         <div class="caption">
-                            <h3>Top User</h3>
-                            <p>...</p>
+                            <h3 class="userTitre">Martine</h3>
+                            <p class="userTexte">Système de culture : Polyculture-élevage <br/>
+                            <p class="userTexte">Région : Charente <br/>
+                            <p class="userTexte">Note : 5 <br/>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/star2.png')}}" alt="">
                         <div class="caption">
-                            <h3>Top Star</h3>
-                            <p>...</p>
+                            <h3 class="starTitre">Les engrais bio</h3>
+                            <p class="starTexte">Note <br/>
+                            <p class="starTexte">1er avril 2016<br/>
+                            <p class="starTexte">Note : 5 <br/>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/user2.png')}}" alt="">
                         <div class="caption">
-                            <h3>Top User</h3>
-                            <p>...</p>
+                            <h3 class="userTitre">David</h3>
+                            <p class="userTexte">Système de culture : Grande culture</p>
+                            <p class="userTexte">Région : Indre-et-Loire <br/>
+                            <p class="userTexte">Note : 4,8</p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-lg-6">
+                    <div class="thumbnail">
+                        <img src="{{ asset('image/star1.png')}}" alt="">
+                        <div class="caption">
+                            <h3 class="starTitre">Les paturages de demain</h3>
+                            <p class="starTexte">Note <br/>
+                            <p class="starTexte">6 juin 2016<br/>
+                            <p class="starTexte">Note : 4,7 <br/>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img src="{{ asset('image/user3.png')}}" alt="">
                         <div class="caption">
-                            <h3>Top Star</h3>
-                            <p>...</p>
+                            <h3 class="userTitre">Thierry</h3>
+                            <p class="userTexte">Système de culture : Grande culture</p>
+                            <p class="userTexte">Région : Palais-de-Calais <br/>
+                            <p class="userTexte">Note: 4,5</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>Top User</h3>
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
+                </div>-->
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -134,49 +158,54 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>article 1</h3>
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>article 2</h3>
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>article 3</h3>
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="thumbnail">
-                        <img src="..." alt="...">
-                        <div class="caption">
-                            <h3>article 4</h3>
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
 
-
+                        <div class="caption">
+                            <h3 class="sujetTitre">Lara</h3>
+                            <a href="#"><p class="sujetTitre">Bruxelles défend les effets positifs du libre-échange</p></a>
+                            <p class="sujetDate">Il y a 17 minutes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3 class="sujetTitre">Joël</h3>
+                            <a href="#"><p class="sujetTitre">Agriculture bio : les défis à rélever face à la croissance</p></a>
+                            <p class="sujetDate">il y a 50 minutes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3 class="sujetTitre">Lara</h3>
+                            <a href="#"><p class="sujetTitre">L'agriculture ouvre ses portes pour aider les jeunes</p></a>
+                            <p class="sujetDate">il y a 3 heures</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3 class="sujetTitre">Cyril</h3>
+                            <a href="#"> <p class="sujetTitre">Le faux semis </p></a>
+                            <p class="sujetDate">il y a 5 heures</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                 <div class="footer">
-                    <h2 class="catTitre">footer</h2>
-
+                    <div class="col-lg-offset-3 col-lg-8">
+                        <img src="{{ asset('image/social.png')}}" alt="reseaux sociaux" class="social">
+                    </div>
                 </div>
 
 
-</body>
+</div>
+
 
 
 
