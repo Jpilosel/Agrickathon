@@ -30,19 +30,6 @@ class DefaultController extends Controller
             'articles' => $articles,
         ));
     }
-    /**
-     * @Route("/pourquoi", name="pourqoui")
-     */
-    public function pourquoiAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $articles = $em->getRepository('AgriBundle:Article')->findAll();
-
-        return $this->render('AgriBundle:Default:tutoriel.html.twig', array(
-            'articles' => $articles,
-        ));
-    }
 
 
     /**

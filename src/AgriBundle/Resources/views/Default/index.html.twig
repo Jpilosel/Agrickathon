@@ -14,12 +14,12 @@
             <a class="navbar-brand " href="#"><img src="{{ asset('image/logo.png')}}" alt="Logo de la Agri'ID" class="img-responsive logo" /></a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Accueil</a></li>
-            <li><a class="menuFont" href="#">Rechercher</a></li>
+            <li class="active"><a href="{{ path('accueil') }}">Accueil</a></li>
+            <li><a class="menuFont" href="{{ path('article') }}">Rechercher</a></li>
             <li><a class="menuFont" href="#">Partager</a></li>
             <li><a class="menuFont" href="#">Actualités</a></li>
             <li><a class="menuFont" href="#">Evénements</a></li>
-            <li><a class="menuFont" href="#">Qui sommes-nous ?</a></li>
+            <li><a class="menuFont" href="{{ path('agri-rangers') }}">Qui sommes-nous ?</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#" class="menuFont"><span class="glyphicon glyphicon-user"></span> S'enregistrer</a></li>
