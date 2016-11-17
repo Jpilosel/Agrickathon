@@ -121,13 +121,18 @@
 }
 /*************************** Pourquoi ***********************************/
 .bodyPourquoi{
-    padding-left: 20px;
+    padding-left: 50px;
 }
-
+.h1Pk{
+    padding-bottom: 45px;
+}
+.tailleLI{
+    font-size: 25px!important;
+}
 /*************************** ISOTOPE ***********************************/
 .imgFooterPourquoi{
     width: 100%;
-    margin-top: 350px;
+    margin-top: 130px;
 }
 .imgFooter {
     width: 100%;
