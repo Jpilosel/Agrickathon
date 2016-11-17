@@ -88,7 +88,7 @@
 }
 /*************************** Ranger ***********************************/
 .bodyRang{
-    background-color: #7a869d;
+    background-color: lightblue;
 }
 .h1Rang{
     font-size: 70px;
@@ -98,9 +98,19 @@
 .imgRang{
     height: 100px;
 }
+/*************************** Pourquoi ***********************************/
+.bodyPourquoi{
+    padding-left: 20px;
+}
+
 /*************************** ISOTOPE ***********************************/
+.imgFooterPourquoi{
+    width: 100%;
+    margin-top: 350px;
+}
 .imgFooter{
     width: 100%;
+    margin-top: 100px;
 }
 
 /*************************** ISOTOPE ***********************************/
