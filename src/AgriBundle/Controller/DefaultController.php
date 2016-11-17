@@ -51,6 +51,14 @@ class DefaultController extends Controller
         return $this->render('AgriBundle:Default:compte.html.twig');
     }
 
+    /**
+     * @Route("/pourquoi", name="pourquoi")
+     */
+    public function pourquoiAction()
+    {
+        return $this->render('AgriBundle:Default:tutoriel.html.twig');
+    }
+
 
     /**
      * @Route("/best/{id}", name="best")
