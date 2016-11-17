@@ -1,9 +1,45 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="HubAgri">
+    <link rel="stylesheet" href="{{ asset('font-awesome-4.6.3/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/jquery-ui-1.12.1/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/summernote.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/style.css')}}">
+    <link rel="icon" type="image/png" href="{{ asset("#") }}">
+    <script src="{{ asset('style/jquery/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.tablesorter/jquery.tablesorter.min.js')}}"></script>
+    <script src="{{ asset('style/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('style/jquery-ui-1.12.1/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/custom.js')}}"></script>
+    <script src="{{ asset('dist/summernote.min.js')}}"></script>
+    <script src="{{ asset('style/js/masonry.pkgd.min.js') }}"></script>
+    <script src="{{ asset('style/js/isotope.pkgd.min.js') }}"></script>
+    <title>HubAgri</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
 
-{% block body %}
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+</head>
+
+<body>
+
     <h1>Article edit</h1>
 
     {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="form-group">
+            {{ form_label(edit_form.contenu, "contenu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+            <div class="col-sm-8">
+                {{ form_widget(edit_form.contenu, {'attr': {'class': 'form-control txtArea'}}) }}
+            </div>
+
+    </div>
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
@@ -18,4 +54,11 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
-{% endblock %}
+        <script>
+            $(document).ready(function() {
+                $('#agribundle_article_contenu').summernote();
+            });
+        </script>
+
+</body>
+</html>

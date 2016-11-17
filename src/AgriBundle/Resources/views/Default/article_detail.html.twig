@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('style/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{ asset('style/jquery-ui-1.12.1/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/summernote.css')}}">
-    <link rel="stylesheet" href="{{ asset('style/style.css')}}">
+
     <link rel="icon" type="image/png" href="{{ asset("#") }}">
     <script src="{{ asset('style/jquery/jquery-3.1.1.min.js')}}"></script>
     <script src="{{ asset('js/jquery.tablesorter/jquery.tablesorter.min.js')}}"></script>
@@ -19,6 +19,14 @@
     <script src="{{ asset('style/js/masonry.pkgd.min.js') }}"></script>
     <script src="{{ asset('style/js/isotope.pkgd.min.js') }}"></script>
     <title>HubAgri</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+    <link rel="stylesheet" href="{{ asset('style/style.css')}}">
 </head>
 {% endblock %}
 <body>
@@ -48,7 +56,7 @@
             Posté le {{ articles.date | date('d-m-Y') }}
         </div>
         <div class="articleDetailContenu text-justify">
-            {{ articles.contenu }}
+            {{ articles.contenu | raw }}
         </div>
         <div>
             {{ articles.video }}
