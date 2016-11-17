@@ -6,8 +6,23 @@
 
 .logo {
     height: 150px;
-    width: 250px;
+    padding-bottom: 70px;
+    margin-top:-36px;
+   }
+
+.menu {
+    height: 80px;
+    margin: 0!important;
 }
+.menuNav {
+    padding-top: 16px;
+    font-size: 1.3vw;
+
+}
+.menuFont {
+    color : black;
+}
+
 
 #glyph {
     color : black;
@@ -52,6 +67,7 @@
     border-top: 1px solid grey;
 }
 
+
 /*************************** ARTICLE ***********************************/
 .nom{
     text-align: left;
@@ -93,7 +109,7 @@
 
 /*************************** Ranger ***********************************/
 .bodyRang{
-    background-color: #7a869d;
+    background-color: lightblue;
 }
 .h1Rang{
     font-size: 70px;
@@ -103,11 +119,78 @@
 .imgRang{
     height: 100px;
 }
-/*************************** ISOTOPE ***********************************/
-.imgFooter{
-    width: 100%;
+/*************************** Pourquoi ***********************************/
+.bodyPourquoi{
+    padding-left: 20px;
 }
 
+/*************************** ISOTOPE ***********************************/
+.imgFooterPourquoi{
+    width: 100%;
+    margin-top: 350px;
+}
+.imgFooter {
+    width: 100%;
+    margin-top: 100px;
+}
+.catTitre2 {
+    padding-bottom:10px;
+}
+
+.userTitre {
+    text-align: center;
+}
+
+.userTexte {
+    text-align: center;
+}
+
+.starTitre {
+    text-align: center;
+}
+
+.starTexte {
+    text-align: center;
+}
+
+.rubrique{
+        padding-top: 20px;
+}
+
+.jumbotron {
+
+    background: url('./image/jumbo.png') no-repeat fixed center center;
+    background-size: cover;
+    height: 900px;
+    width:100%;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.background1 {
+    background-color: lightgrey;
+    padding-top: 20px;
+}
+
+.footer {
+    background: url('./image/footer2.jpg')no-repeat fixed center center;
+    height: 900px;
+    margin: 0;
+
+}
+
+.social {
+
+   padding-top:600px;
+    text-align: center;
+}
+
+.note {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 
