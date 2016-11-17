@@ -31,7 +31,7 @@
 .articleDetailNom{
     color: white;
     font-weight: bold;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-bottom: 10px;
 }
 .imgthomas{
@@ -61,7 +61,7 @@
 }
 .recherche{
     border-right: 1px solid grey;
-    height: 800px;
+    height: 100%;
     padding-top: 20em;
     width: 13%;
 }
@@ -83,9 +83,26 @@
     padding: 8px 0 0 10px;
 }
 .boutonPublier{
-    margin-left: 5%;
-    margin-bottom: 30px;
+    margin-top: -6px;
+
 }
+/*************************** Ranger ***********************************/
+.bodyRang{
+    background-color: #7a869d;
+}
+.h1Rang{
+    font-size: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.imgRang{
+    height: 100px;
+}
+/*************************** ISOTOPE ***********************************/
+.imgFooter{
+    width: 100%;
+}
+
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 

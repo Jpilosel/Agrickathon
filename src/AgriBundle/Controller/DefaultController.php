@@ -50,7 +50,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/compte", name="compte")
+     * @Route("/agri-rangers", name="agri-rangers")
      */
     public function moncomptelAction()
     {
