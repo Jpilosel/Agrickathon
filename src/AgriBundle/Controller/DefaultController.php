@@ -4,6 +4,7 @@ namespace AgriBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use AgriBundle\Entity\Article;
 
 class DefaultController extends Controller
 {
@@ -12,6 +13,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
         return $this->render('AgriBundle:Default:index.html.twig');
     }
 
@@ -36,4 +38,31 @@ class DefaultController extends Controller
     {
         return $this->render('AgriBundle:Default:compte.html.twig');
     }
+
+
+    /**
+     * @Route("/best/{id}", name="best")
+     */
+
+    public function bestUserAction($id)
+
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('AgriBundle:Article')->findOneById($id);
+
+        return $this->render('AgriBundle:Default:bestUser.html.twig', array(
+            'articles' => $articles,
+        ));
+    }
+
+
+       /* $repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('AgriBundle:Article');
+
+        $contribs = $repository->findAll();
+
+        return $this->render('AgriBundle:Default:bestUser.html.twig', array('contrib' => $contribs));*/
+
 }
