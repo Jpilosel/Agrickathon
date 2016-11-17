@@ -23,7 +23,6 @@
     color : black;
 }
 
-
 #glyph {
     color : black;
     margin-bottom: 200px;
@@ -35,6 +34,8 @@
 .catTitre {
     text-align: center;
     padding-bottom:10px;
+    color:white;
+
 }
 .articleDetailContenu{
     font-size: 20px;
@@ -140,10 +141,18 @@
 }
 .catTitre2 {
     padding-bottom:10px;
+    color:white;
+}
+
+.catTitre3 {
+    padding-bottom:10px;
+    text-align: center;
+
 }
 
 .userTitre {
     text-align: center;
+
 }
 
 .userTexte {
@@ -164,18 +173,22 @@
 
 .jumbotron {
 
-    background: url('./image/jumbo.png') no-repeat fixed center center;
+    background: url('./image/jumbo.jpg') no-repeat fixed center center;
     background-size: cover;
     height: 900px;
     width:100%;
     color: white;
     text-shadow: 3px 3px 3px black;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
 }
+.jumboTexte {
+    padding-top: 300px;
+}
+
 .background1 {
-    background-color: lightgrey;
+    background-color: steelblue;
     padding-top: 20px;
 }
 
@@ -189,13 +202,27 @@
 .social {
 
    padding-top:600px;
-    text-align: center;
+
 }
 
 .note {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.starVote {
+    text-align: center;
+
+}
+
+.slogan{
+     font-size: 35px!important;
+ }
+.slogan2{
+    font-size: 25px!important;
+}
+
+
 /*************************** ISOTOPE ***********************************/
 * { box-sizing: border-box; }
 

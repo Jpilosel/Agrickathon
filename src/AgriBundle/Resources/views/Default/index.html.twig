@@ -14,7 +14,7 @@
             <a class="navbar-brand " href="#"><img src="{{ asset('image/logo.png')}}" alt="Logo de la Agri'ID" class="img-responsive logo" /></a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ path('accueil') }}">Accueil</a></li>
+            <li class="active"><a class="menuFont" href="{{ path('accueil') }}">Accueil</a></li>
             <li><a class="menuFont" href="{{ path('article') }}">Rechercher</a></li>
             <li><a class="menuFont" href="#">Partager</a></li>
             <li><a class="menuFont" href="#">Actualités</a></li>
@@ -32,7 +32,13 @@
     <div class="jumbotron">
 
         <div class="container-fluid">
-           <!--- <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a></p>--->
+            <div class="jumboTexte">
+                <h1>Agri'ID </h1><br/>
+                <p class="slogan">Recherchez, Trouvez, Contribuez !</p>
+                <p class="slogan2">Plateforme collaborative des professionnels du monde agricole</p>
+
+                <p><a class="btn btn-primary btn-lg" href="{# {{ path ('pourquoi') }}#}#" role="button">En savoir plus</a></p>
+            </div>
         </div>
     </div>
 
@@ -44,7 +50,7 @@
 
                 <div class="col-lg-6">
                     <a href="#" class="thumbnail">
-                        <img src="{{ asset('image/cat2.jpeg')}}"alt="rechecher">
+                        <img class="search" src="{{ asset('image/cat5.jpg')}}"alt="rechecher">
                     </a>
                 </div>
 
@@ -81,12 +87,11 @@
                 <div class="col-lg-offset-1 col-lg-4"><h2 class="catTitre2">Article des top utilisateurs</h2></div>
                 <div class="col-lg-6">
                     <div class="thumbnail">
-                        <img src="{{ asset('image/star1.png')}}" alt="">
+                        <img src="{{ asset('image/star1.png')}}" alt="paturage">
                         <div class="caption">
                             <h3 class="starTitre">Les paturages de demain</h3>
-                            <p class="starTexte">Note <br/>
                             <p class="starTexte">1er novembre 2016<br/>
-                            <p class="starTexte">Note : 5 <br/>
+                            <p class="starVote"><img src="{{ asset('image/stars.png')}}" alt="vote"> <br/>
                         </div>
                     </div>
                 </div>
@@ -107,9 +112,8 @@
                         <img src="{{ asset('image/star2.png')}}" alt="">
                         <div class="caption">
                             <h3 class="starTitre">Les engrais bio</h3>
-                            <p class="starTexte">Note <br/>
                             <p class="starTexte">1er avril 2016<br/>
-                            <p class="starTexte">Note : 5 <br/>
+                            <p class="starVote"><img src="{{ asset('image/stars.png')}}" alt="vote"> <br/>
                         </div>
                     </div>
                 </div>
@@ -121,6 +125,7 @@
                             <p class="userTexte">Système de culture : Grande culture</p>
                             <p class="userTexte">Région : Indre-et-Loire <br/>
                             <p class="userTexte">Note : 4,8</p>
+
                         </div>
                     </div>
                 </div>
@@ -154,7 +159,7 @@
 
     <div class="container">
         <div class="note">
-            <h2 class="catTitre">Derniers articles</h2>
+            <h2 class="catTitre3">Derniers articles</h2>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="thumbnail">
@@ -198,7 +203,7 @@
         </div>
     </div>
                 <div class="footer">
-                    <div class="col-lg-offset-3 col-lg-8">
+                    <div class="col-lg-offset-4 col-lg-8">
                         <img src="{{ asset('image/social.png')}}" alt="reseaux sociaux" class="social">
                     </div>
                 </div>
